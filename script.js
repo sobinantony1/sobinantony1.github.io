@@ -82,3 +82,7 @@ document.querySelectorAll('img').forEach(img => {
   img.setAttribute('draggable', 'false');
 });
 
+document.addEventListener('click', () => {
+  document.body.classList.remove('blurred');
+  document.body.classList.add('unblur');
+}, { once: true });
