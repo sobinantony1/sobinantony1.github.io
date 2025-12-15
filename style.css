@@ -89,3 +89,11 @@ footer{padding:1.2rem 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--
 }
 .glow{box-shadow:0 8px 42px rgba(78,225,255,0.06);}
 
+.blurred {
+  filter: blur(10px);
+}
+
+.unblur {
+  filter: none;
+  transition: filter 0.3s ease;
+}
