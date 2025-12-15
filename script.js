@@ -76,21 +76,6 @@ document.addEventListener('keydown', e => {
     e.preventDefault();
   }
 });
-<script>
-document.addEventListener('keydown', function (e) {
-  if (
-    (e.ctrlKey && e.shiftKey && e.key === 'I') ||   // Ctrl + Shift + I
-    (e.ctrlKey && e.shiftKey && e.key === 'J') ||   // Ctrl + Shift + J
-    (e.ctrlKey && e.shiftKey && e.key === 'C') ||   // Ctrl + Shift + C
-    (e.key === 'F12') ||                            // F12
-    (e.ctrlKey && e.key === 'U')                    // Ctrl + U
-  ) {
-    e.preventDefault();
-    return false;
-  }
-});
-</script>
-
 // Disable image dragging
 document.querySelectorAll('img').forEach(img => {
   img.setAttribute('draggable', 'false');
