@@ -65,3 +65,20 @@
   })
 })();
 
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Block common save shortcuts
+document.addEventListener('keydown', e => {
+  if (
+    (e.ctrlKey && ['s','u','c','p'].includes(e.key.toLowerCase())) ||
+    e.key === 'F12'
+  ) {
+    e.preventDefault();
+  }
+});
+
+// Disable image dragging
+document.querySelectorAll('img').forEach(img => {
+  img.setAttribute('draggable', 'false');
+});
+
