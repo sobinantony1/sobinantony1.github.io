@@ -85,3 +85,15 @@ document.addEventListener('click', () => {
   document.body.classList.remove('blurred');
   document.body.classList.add('unblur');
 }, { once: true });
+
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+    (e.ctrlKey && e.key === 'U') ||
+    (e.ctrlKey && e.shiftKey && e.key === 'C')
+  ) {
+    e.preventDefault();
+    return false;
+  }
+});
